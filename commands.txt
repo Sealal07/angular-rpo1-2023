@@ -1,0 +1,98 @@
+node -v
+npm -v
+npm install -g npm@latest
+
+
+
+
+npm install -g @angular/cli
+npx ng version
+
+npx ng new test-app
+
+cd test-app
+npx ng serve --open 
+
+
+
+
+Компонент:
+1)name.component.ts - основная логика и данные
+2)name.component.html-шаблон(разметка)
+3)name.components.css-стили компонента
+4)name.component.spec.ts-модульные тесты 
+
+
+npx ng generate component user-profile
+npx ng g c user-profile
+
+
+
+
+
+
+
+ 
+
+npx ng g c header
+npx ng g c card
+npx ng g c footer
+
+
+
+
+
+@Input принимает данные сверху вниз. 
+В шаблоне используется в квадратных скобках: 
+[title]="item.title"
+
+@Output передает сигналы/события снизу вверх. 
+В шаблоне используется в круглых скобках: 
+(cardDelete)="removeCard(card.id)" 
+используется класс EventEmitter и его метод .emit()
+
+[ngModel]-для работы с полями формы
+TS -> HTML 
+HTML -> TS 
+
+
+ДИРЕКТИВЫ
+1)Структурные (@if, @for, @switch)
+2)Атрибутивные (ngModel, ngStyle, ngClass)
+
+
+
+npx ng new superhero-constructor
+cd  superhero-constructor
+npx ng g c components/hero-card
+
+
+
+Сервисы
+
+npx ng new task-app 
+cd task-app
+npx ng g s services/task
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
