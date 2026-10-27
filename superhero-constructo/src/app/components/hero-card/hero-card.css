@@ -1,0 +1,30 @@
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.card.warrior{
+    border-left: 8px solid #d9534f;
+}
+.card.mage{
+    border-left: 8px solid #0275d8;
+}
+.card.archer{
+    border-left: 8px solid #5cb85c;
+}
+.badge{
+    background: gold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.status.ready{
+    color: green;
+}
+.status.busy{
+    color: red;
+}

@@ -1,0 +1,21 @@
+<div class="card" [ngClass]="hero.heroClass"
+    [ngStyle]="{'border-width': hero.level > 5 ? '5px' : '1px'}">
+    <div class="header">
+        <h3>{{ hero.name || 'Безымянный' }}</h3>
+        @if (hero.level > 5){
+            <span class="badge">💥ELITE</span>
+        }
+    </div>
+    <p><b>Класс:</b> {{ hero.heroClass }}</p>
+    <p><b>Уровень: </b> {{ hero.level }}</p>
+    <p><b>Сила :</b> {{ hero.power }}</p>
+
+    @if (hero.isAvailable){
+        <p class="status ready">Готов к миссии ✅</p>
+    }@else{
+        <p class="status busy">На задании ❌</p>
+    }
+
+    <button (click)="deleteHero()">🗑</button>
+
+</div>

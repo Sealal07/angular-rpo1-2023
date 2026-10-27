@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Конструктор персонажа</h1>
+
+  <div class="form-panel">
+    <h2>Создать героя</h2>
+
+    <label>Имя: </label>
+    <input type="text" [(ngModel)]="currentHero.name">
+
+    <label>Класс: </label>
+    <select [(ngModel)]="currentHero.heroClass" >
+      <option value="warrior">Воин</option>
+      <option value="mage">Маг</option>
+      <option value="archer">Лучник</option>
+    </select>
+
+    <label>Уровень ({{ currentHero.level }}): </label>
+    <input type="range" min="1" max="10" 
+    [(ngModel)]="currentHero.level">
+    
+    <label>Сила: </label>
+    <select [(ngModel)]="currentHero.power">
+      @for(pow of availablePower; track pow){
+        <option [value]="pow">{{ pow }}</option>
+      }
+    </select>
+    <label>
+      <input type="checkbox" [(ngModel)]="currentHero.isAvailable">
+      Доступен
+    </label>
+    <button (click)="addHero()"
+    [ngClass]="{'btn-active': isAnimating}"
+    >Создать персонажа</button>
+  </div>
+
+  <h2>Армия героев:</h2>
+  <div class="grid">
+    @for (h of heroes; track $index){
+      <app-hero-card
+      
+        [hero]="h"
+        (onDelete)="removeHero($index)">
+      </app-hero-card>
+    }@empty{
+      <p>Героев нет. Используйте конструктор</p>
+    }
+  </div>
+</div>
