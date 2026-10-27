@@ -1,0 +1,13 @@
+<div class="card">
+    <h3>{{ title }}</h3>
+    <p>{{ desc }}</p>
+    <div class="card-action">
+        <button class="like-btn" (click)="incrementLikes()">
+            👍 {{ likesCount }}
+        </button>
+
+        <button class="delete-btn" (click)="onDeleteClick()">
+            ❌
+        </button>
+    </div>
+</div>

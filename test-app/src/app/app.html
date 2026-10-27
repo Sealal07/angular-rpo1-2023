@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<main class="main-content">
+  <div [ngClass]="{'active': isActive, 
+                'default': !isActive}">
+        <input  
+          type="text"
+          [(ngModel)]="userName" 
+          placeholder="введите ваше имя"
+        >
+        <p
+        [ngStyle]="{'background':boxColor, 
+      'font-size': isWarnning ? '24px' : '14px'}"
+        >Привет {{ userName ? userName : 'гость'}}</p>
+      @if (userName){
+        <button (click)="userName=''">Очистить</button>
+      }
+  </div>
+  <h2>Список карточек</h2>
+  <div class="cards-container">
+    @for (card of cards; track card.id){
+      <app-card
+                [title]="card.title"
+                [desc]="card.desc"
+                (cardDelete)="removeCard(card.id)"
+                >
+      </app-card>
+    }@empty{
+      <p>Все карточки удалены</p>
+    }
+  </div>
+</main>

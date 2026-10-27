@@ -1,0 +1,25 @@
+.card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.like-btn, .delete-btn{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+.delete-btn{
+    background-color: #f44336;
+}
+.card-action{
+    display: flex;
+    gap: 0.5rem;
+}

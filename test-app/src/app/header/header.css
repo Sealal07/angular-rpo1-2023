@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f51b5;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header button{
+    background-color: white;
+    color: #3f51b5;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.user-section{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

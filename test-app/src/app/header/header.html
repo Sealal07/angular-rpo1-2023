@@ -1,0 +1,14 @@
+
+<header>
+    <h1>{{ siteTitle }}</h1>
+    <div class="user-section">
+
+        @if (isLoggedIn) {
+            <span>Добро пожаловать!</span>
+            <button (click)="toggleLogin()">Выйти</button>
+        } @else{
+            <button (click)="toggleLogin()">Войти</button>
+        }
+
+    </div>
+</header>

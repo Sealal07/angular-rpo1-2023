@@ -1,0 +1,27 @@
+<div>
+  <h2>Список задач</h2>
+
+  <div>
+    <input type="text"
+           [(ngModel)]="newTaskTitle"
+           placeholder="Введите текст задачи..."
+    >
+    <button (click)="addNewTask()">Добавить</button>
+  </div>
+  <ul>
+    @for(t of tasks; track t.id){
+      <li>
+        <input type="checkbox" 
+               [checked]="t.completed" 
+               (change)="toggleTask(t.id)"
+        >
+        <span [style.text-decoration]="t.completed ? 'line-through' : 'none'"
+        >{{t.title}}</span>
+        <button (click)="removeTask(t.id)">&times;</button>
+      </li>
+    }@empty{
+      <p>Список задач пуст</p>
+    }
+  </ul>
+
+</div>
