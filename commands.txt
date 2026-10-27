@@ -77,7 +77,16 @@ npx ng g s services/task
 
 
 
+Маршрутизация 
+SPA (Single Page Application) 
+<router-outlet>-компонент-заполнитель, 
+routerLink - директива для адреса компоненты 
 
+npx ng g c pages/home
+npx ng g c pages/tasks
+npx ng g c components/navbar
+
+app.routes.ts - файл для настройки маршрутов
 
 
 
